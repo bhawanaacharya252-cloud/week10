@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Butwal City</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7fa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(90deg, #006666, #00b3b3);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 2px solid #ccc;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-weight: bold;
+      color: #006666;
+      transition: 0.3s;
+    }
+
+    .tab:hover {
+      background-color: #e0f7f7;
+    }
+
+    .tab.active {
+      border-bottom: 3px solid #00b3b3;
+      color: #004d4d;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 1rem;
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .accordion-item {
+      border-top: 1px solid #ccc;
+    }
+
+    .accordion-header {
+      background-color: #f9f9f9;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 10px;
+      background: #fff;
+      color: #333;
+    }
+
+    .btn {
+      background-color: #00b3b3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #008080;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background-color: #f0f0f0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Butwal</h1>
+    <p>The Gateway to Lumbini — A City of Growth and Culture</p>
+  </header>
+
+  <main>
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-target="overview">Overview</button>
+      <button class="tab" data-target="places">Famous Places</button>
+      <button class="tab" data-target="travel">Travel & Stay</button>
+      <button class="tab" data-target="history">History</button>
+    </div>
+
+    <!-- Overview -->
+    <section id="overview" class="tab-content active">
+      <h2>About Butwal</h2>
+      <p>
+        <img src="images/butwal.jpeg" alt="Butwal City View" />
+        Butwal is a dynamic city located in the Lumbini Province of Nepal. It serves as a major trade hub connecting the Terai plains with the hilly regions of Nepal.
+        Known for its cleanliness, greenery, and rapid development, Butwal is one of the fastest-growing cities in the country.
+      </p>
+      
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">Where is Butwal located?</div>
+          <div class="accordion-content">
+            Butwal lies in Rupandehi District, about 240 km west of Kathmandu and close to the Indian border town of Sunauli. It sits at the base of the Siwalik Hills and on the banks of the Tinau River.
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">Why is Butwal important?</div>
+          <div class="accordion-content">
+            Butwal is a key economic and transportation center in Nepal, linking highways to Pokhara, Kathmandu, and Lumbini. It’s known for its modern infrastructure and educational institutions.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Famous Places -->
+    <section id="places" class="tab-content">
+      <h2>Famous Places Near Butwal</h2>
+      <p>Here are some of the most popular tourist attractions in and around Butwal:</p>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">Lumbini – Birthplace of Lord Buddha</div>
+          <div class="accordion-content">
+            Lumbini is just 30 km south of Butwal and is one of the most sacred sites in the world for Buddhists. It features the Maya Devi Temple, Ashokan Pillar, and beautiful monasteries built by different countries.
+            <img src="images/lumbini.jpg" alt="Lumbini Temple">
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">Manimukunda Park (Phulbari)</div>
+          <div class="accordion-content">
+            This beautiful park, believed to be the ancient palace of King Manimukunda Sen, is surrounded by greenery and historic ruins. It’s a perfect picnic and relaxation spot for families.
+            <img src="images/phoolbari.jpeg" alt="Manimukunda Park">
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">Siddhababa Temple</div>
+          <div class="accordion-content">
+            Located on the Butwal–Palpa highway, Siddhababa Temple is a revered Hindu shrine attracting pilgrims from all over Nepal. The temple sits on a hillside with scenic views of the Tinau River valley.
+            <img src="images/siddhababa.jpeg" alt="Siddhababa Temple">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel -->
+    <section id="travel" class="tab-content">
+      <h2>Travel & Stay in Butwal</h2>
+      <p>
+        Butwal is well connected by the East-West Highway and Siddhartha Highway. The nearest airport is Gautam Buddha International Airport, just a 35-minute drive away.
+      </p>
+      <p>
+        Visitors can find comfortable hotels, lodges, and guesthouses throughout the city, ranging from budget-friendly to luxury options.
+      </p>
+      <button class="btn" id="openContact">Contact Us</button>
+      <button class="btn" id="openMap">View Map</button>
+    </section>
+
+    <!-- History -->
+    <section id="history" class="tab-content">
+      <h2>History of Butwal</h2>
+      <p>
+        Historically, Butwal was a small trade settlement between India and Nepal’s hill regions. Its location along the Tinau River made it a natural market and resting point for travelers.
+      </p>
+      <p>
+        In recent decades, Butwal has transformed into a modern urban area, playing a crucial role in Nepal’s economy, education, and development.
+      </p>
+    </section>
+  </main>
+
+  <!-- Dialog Boxes -->
+  <dialog id="contactDialog">
+    <h3>Contact Us</h3>
+    <p>Have questions about visiting Butwal? Send us a message!</p>
+    <input type="text" placeholder="Your message here..." style="width:100%;padding:8px;margin-bottom:10px;">
+    <div style="text-align:right;">
+      <button class="btn" id="closeContact">Close</button>
+    </div>
+  </dialog>
+
+  <dialog id="mapDialog">
+    <h3>Map of Butwal</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.414619520796!2d83.45767747422906!3d27.688726976192055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399684d3f8577f8d%3A0x43c6078992b791e!2sButwal!5e0!3m2!1sen!2snp!4v1728308712231!5m2!1sen!2snp"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div style="text-align:right;margin-top:10px;">
+      <button class="btn" id="closeMap">Close</button>
+    </div>
+  </dialog>
+
+  <footer>
+    <p>Created by Bhawana Acharya — Interactive Webpage of Butwal, Nepal</p>
+  </footer>
+
+  <script>
+    // Tabs
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.target).classList.add('active');
+      });
+    });
+
+    // Accordion
+    const accHeaders = document.querySelectorAll('.accordion-header');
+    accHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    // Dialogs
+    const contactDialog = document.getElementById('contactDialog');
+    const mapDialog = document.getElementById('mapDialog');
+    document.getElementById('openContact').onclick = () => contactDialog.showModal();
+    document.getElementById('closeContact').onclick = () => contactDialog.close();
+    document.getElementById('openMap').onclick = () => mapDialog.showModal();
+    document.getElementById('closeMap').onclick = () => mapDialog.close();
+  </script>
+</body>
+</html>
